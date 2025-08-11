@@ -1,0 +1,126 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-section {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.section-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.profile-img {
+    width: 300%;
+    height: 300px;
+    object-fit: contain;
+    border-bottom: 1px solid #eee;
+}
+
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.card-content h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 0;
+}
+
+.card-content p {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.5;
+    flex-grow: 1; /* Allows paragraph to take up available space */
+}
+
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2em;
+    }
+
+    .grid-container {
+        gap: 20px;
+    }
+
+    .card {
+        max-width: 350px; /* Limit card width on smaller screens if desired */
+        margin: 0 auto; /* Center cards in a single column layout */
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.8em;
+    }
+
+    .card-content h3 {
+        font-size: 1.3em;
+    }
+
+    .profile-img {
+        height: 100px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
